@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "2a939c29-9302-4fd7-abfe-1b31d33483a7",
+		"name": "FeesManagementService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22667464"
+	},
+	"item": [
+		{
+			"name": "feesCollection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\": 1,\r\n    \"feesAmount\": 1000,\r\n    \"grade\":\"KG1\",\r\n    \"paymentMode\":\"creditCardPayment\",\r\n    \"cardType\" : \"Mastercard\",\r\n    \"cardNumber\":\"1234567890\",\r\n    \"paymentReferenceNumber\" : \"111222333\",\r\n    \"feesCreditTimestamp\" : \"18-NOV-2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/fees/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"fees",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFeesPaymentDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/fees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"fees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
